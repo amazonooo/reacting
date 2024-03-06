@@ -3,7 +3,7 @@ import { ways } from './data'
 import Way from './components/WayToTeach'
 
 function App() {
-  return (
+	return (
 		<div>
 			<Header />
 			<main>
@@ -14,7 +14,7 @@ function App() {
 						<WayToTeach {...ways[0]} />
 						<WayToTeach {...ways[0]} />
 						<WayToTeach {...ways[0]} />
-            {/* Или так */}
+						{/* Или так */}
 						<WayToTeach
 							title={ways[3].title}
 							description={ways[3].description}

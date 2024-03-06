@@ -7,5 +7,5 @@ function WayToTeach({ title, description }) {
 		</li>
 	)
 }
- 
+
 export default Way
