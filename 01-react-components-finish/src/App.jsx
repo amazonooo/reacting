@@ -1,18 +1,24 @@
 import Header from './components/Header'
 import Button from './components/Button/Button'
 import WayToTeach from './components/WayToTeach'
-import { ways } from './data'
+import { useState } from 'react'
+import { ways, differences } from './data'
 
 export default function App() {
-  let content = 'Нажми на кнопку'
+  const [contentType, setContentType] = useState(null)
 
   function handleClick(type) {
-    console.log('button clicked', type)
-    content = type
+	setContentType(type)
   }
-  function classToggle() {
 
-  }
+//   let tabContent = null
+
+//   if (contentType) {
+// 	tabContent = <p>{differences[contentType]}</p>
+//   } else {
+// 	tabContent = <p>Нажми на кнопку</p>
+//   }
+
   return (
 		<div>
 			<Header />
@@ -36,20 +42,24 @@ export default function App() {
 				<section>
 					<h3>Чем мы отличаемся от других</h3>
 
-					<Button onClick={() => handleClick('way')} classToggle={classToggle}>
-						Подход
-					</Button>
-					<Button onClick={() => handleClick('easy')} classToggle={classToggle}>
-						Доступность
-					</Button>
-					<Button
-						onClick={() => handleClick('program')}
-						classToggle={classToggle}
-					>
-						Концентрация
-					</Button>
+					<Button isActive={contentType === 'way'} onClick={() => handleClick('way')}>Подход</Button>
+					<Button isActive={contentType === 'easy'} onClick={() => handleClick('easy')}>Доступность</Button>
+					<Button isActive={contentType === 'program'} onClick={() => handleClick('program')}>Концентрация</Button>
 
-					<p>{content}</p>
+					{/* 1 способ */}
+					{/* { contentType ? <p>{differences[contentType]}</p> : <p>Нажми на кнопку</p>} */}
+
+					{/* 2 способ */}
+					{/* {!contentType ? <p>Нажми на кнопку</p> : null}
+					{contentType ? <p>{differences[contentType]}</p> : null} */}
+
+					{/* 3 способ */}
+					{!contentType && <p>Нажми на кнопку</p>}
+					{contentType && <p>{differences[contentType]}</p>}
+
+					{/* 4 способ */}
+					{/* {tabContent} */}
+
 				</section>
 			</main>
 		</div>
