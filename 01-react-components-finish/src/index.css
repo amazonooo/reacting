@@ -10,16 +10,6 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-header {
-  height: 50px;
-  display: flex;
-  padding: 0 2rem;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #ccc;
-  background: #fafafa;
-}
-
 main {
   max-width: 850px;
   margin: 0 auto;
@@ -47,11 +37,11 @@ p {
   padding: 1rem 0;
 }
 
-/* .centered {
+.centered {
   text-align: center;
 }
 
-.control {
+/* .control {
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 0.5rem 1rem;
