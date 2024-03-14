@@ -3,7 +3,7 @@ import TeachingSection from './components/TeachingSection'
 import DifferencesSection from './components/DifferencesSection'
 import IntroSection from './components/IntroSection'
 import TabsSection from './components/TabsSection'
-import FeedBackSection from './components/FeedBackSection'
+import FeedBackSection from './components/FeedbackSection'
 import { useState } from 'react'
 
 export default function App() {
