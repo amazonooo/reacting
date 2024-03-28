@@ -48,13 +48,15 @@ export default function FeedBackSection() {
 						<option value='suggest'>Предложение</option>
 					</select>
 
-					<pre>
+					{/* <pre>
 						Name: {form.name}
 						<br />
 						Reason: {form.reason}
-					</pre>
+					</pre> */}
 
 					<Button disabled={form.hasError} isActive={!form.hasError}>Отправить</Button>
+
+					
 				</form>
 			</section>
 		)
