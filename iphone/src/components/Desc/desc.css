@@ -1,0 +1,28 @@
+.desc {
+    margin-top: 60px;
+}
+
+.desc__title {
+    text-align: center;
+    color: rgb(113, 113, 113);
+    font-size: 32px;
+    font-weight: 700;
+    line-height: calc(39 / 32);
+    margin-bottom: 50px;
+}
+
+.desc__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.desc__text-block {
+    max-width: 565px;
+}
+
+.text-flex {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+}
