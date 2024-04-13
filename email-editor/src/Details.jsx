@@ -1,9 +1,20 @@
-export function Details({ title, setTitle }) {
+export function Details({ details, setDetails }) {
     return (
-        <>
-            <h1>{title}</h1>
-            <div>Hello, world!</div>
-            <button onClick={() => setTitle('New title')}>Click</button>
-        </>
-    )
+			<>
+				<h1>{details.title}</h1>
+				<div>{details.descriprion}</div>
+				<button
+					onClick={() =>
+						setDetails(prev => {
+							return {
+								...prev,
+								title: prev.title + '...',
+							}
+						})
+					}
+				>
+					{details.buttonText}
+				</button>
+			</>
+		)
 }
