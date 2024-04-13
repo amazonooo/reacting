@@ -1,0 +1,50 @@
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo span {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22.61px;
+    letter-spacing: 0.14px;
+}
+
+.list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.item {
+    position: relative;
+    list-style-type: none;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.61px;
+    letter-spacing: 0.14px;
+    color: #7767FF;
+}
+
+.link:hover::before {
+    width: 100%;
+}
+
+.link::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    width: 0;
+    left: 0;
+    height: 2px;
+    background-color: #7767FF;
+    transition: all .5s;
+}
