@@ -1,29 +1,24 @@
-import { useEffect, useState } from 'react'
+import { useRef, useState } from 'react'
 import styles from './App.module.scss'
-import { Details } from '../src/Details'
+import { Details } from './Details'
 
-export function App() 
+export function App() { 
   const [details, setDetails] = useState({
-	isLoading: true,
+	isLoading: false,
 	title: 'useEffect',
 	descriprion: 'Hello, world!',
 	buttonText: 'Click'
   })
 
-  useEffect(() => {
-
-  }, [])
+  const handleLoading = () => {
+	setDetails(prev => ({...prev, isLoading: !prev.isLoading}))
+  }
 
   return (
 		<div className={styles.layout}>
-			<img src='./vite.svg' width={200} />
-
-			{details.isLoading ? (
-				<p>Loading...</p>
-			) : (
-			<Details details={details} setDetails=
-			{setDetails} />
-			)}
+			<img src='./vite.svg' width={200} className={styles.img} />
+			{details.isLoading && <p>Loading...</p>}
+			<Details details={details} handleLoading={handleLoading} />
 		</div>
 	)
 }
