@@ -1,0 +1,41 @@
+.advantages {
+    padding: 170px 0;
+}
+
+.advantages_inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 170px;
+}
+
+.text_block {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+}
+
+.text_block button {
+    width: 110px;
+    font-size: 14px;
+}
+
+.text_block h1 {
+    color: rgb(13, 13, 13);
+    font-size: 58px;
+    font-weight: 400;
+    line-height: 62.3px;
+    letter-spacing: 0.56px;
+}
+
+.text_block h2 {
+    color: rgb(13, 13, 13);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0.16px;
+}
+
+.img img {
+    pointer-events: none;
+}

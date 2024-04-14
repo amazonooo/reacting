@@ -1,0 +1,15 @@
+.card {
+    border-radius: 4.5px;
+    background: rgb(36, 36, 36);
+    width: 386px;
+    height: 319px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    gap: 25px;
+}
+
+.card_logo {
+    display: flex;
+    gap: 20px;
+}
