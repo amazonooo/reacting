@@ -1,24 +1,34 @@
 import { useRef, useState } from 'react'
 import styles from './App.module.scss'
-import { Details } from './Details'
+import image from './assets/react.svg'
+import Details from './Details'
 
-export function App() { 
+export function App() {
   const [details, setDetails] = useState({
-	isLoading: false,
-	title: 'useEffect',
-	descriprion: 'Hello, world!',
-	buttonText: 'Click'
+    isLoading: true,
+    title: 'useEffect',
+    description: 'Hello, World!',
+    buttonText: 'Click'
   })
 
-  const handleLoading = () => {
-	setDetails(prev => ({...prev, isLoading: !prev.isLoading}))
+  const imageRef = useRef(null)
+
+  const onClick = () => {
+    imageRef.current.style.borderRadius = '20px'
+    imageRef.current.style.boxShasow = '0 3px 6px rgba(0, 0, 0, 0.25)'
   }
 
   return (
 		<div className={styles.layout}>
-			<img src='./vite.svg' width={200} className={styles.img} />
-			{details.isLoading && <p>Loading...</p>}
-			<Details details={details} handleLoading={handleLoading} />
+			<img ref={imageRef} src={image} width={250} className={styles.img} />
+      <br />
+			<button onClick={onClick}>Change image</button>
+
+			{details.isLoading ? (
+				<p>Loading...</p>
+			) : (
+				<Details details={details} setDetails={setDetails} />
+			)}
 		</div>
 	)
 }
