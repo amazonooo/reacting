@@ -1,5 +1,5 @@
 import cn from "classnames";
-import {BsTrash} from 'react-icons/bs'
+import { BsTrash } from 'react-icons/bs';
 import Check from "./Check";
 
 const TodoItem = ({ todo, changeTodo, removeTodo }) => {
