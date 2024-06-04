@@ -1,0 +1,10 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.card img {
+  width: 300px;
+  height: 200px;
+}

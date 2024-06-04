@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
 import { IShippingFields } from '../../app.interface';
 
 const ShippingForm: FC = () => {
@@ -12,6 +13,12 @@ const ShippingForm: FC = () => {
     mode: 'onChange',
   })
 
+	const navigate = useNavigate();
+
+	const handleClick = () => {
+		navigate('/home')
+	}
+
   const onSubmit: SubmitHandler<IShippingFields> = data => {
     console.log(data)
     reset()
@@ -19,7 +26,7 @@ const ShippingForm: FC = () => {
 
   return (
 		<div>
-			<h1 style={{textAlign: 'center'}}>Sign Up</h1>
+			<h1 style={{ textAlign: 'center' }}>Sign Up</h1>
 			<form onSubmit={handleSubmit(onSubmit)} style={{ margin: '0 auto' }}>
 				<div>
 					<input
@@ -50,7 +57,7 @@ const ShippingForm: FC = () => {
 					)}
 				</div>
 
-        <button>Send</button>
+				<a onClick={handleClick}>Send</a>
 			</form>
 		</div>
 	)

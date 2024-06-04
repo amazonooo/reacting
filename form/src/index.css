@@ -18,9 +18,6 @@ a {
   color: #646cff;
   text-decoration: inherit;
 }
-a:hover {
-  color: #535bf2;
-}
 
 body {
   margin: 0;
@@ -53,19 +50,6 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
-
 input {
   margin-bottom: 15px;
   padding: 13px 16px;
@@ -75,7 +59,7 @@ input {
   outline: none;
 }
 
-button {
+a {
   font-size: 16px;
   margin-top: 15px;
   border: none;
@@ -84,7 +68,7 @@ button {
   text-align: center;
   color: white;
   padding: 12px;
-  width: 100%;
+  width: 90%;
   font-weight: bold;
   display: block;
   cursor: pointer;
