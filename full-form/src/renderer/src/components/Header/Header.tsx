@@ -11,7 +11,7 @@ const Header: FC = () => {
           <h1 className={styles.header__title}>Minecraft</h1>
           <div className={styles.header__btns}>
             <div className={styles.header__collapse}>
-              <IoRemoveOutline size={30} />
+              <IoRemoveOutline className={styles.collapse} />
             </div>
             <div className={styles.header__close}>
               <IoIosClose size={30} className={styles.close} />

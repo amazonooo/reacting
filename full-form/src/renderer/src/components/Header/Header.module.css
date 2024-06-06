@@ -1,7 +1,13 @@
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
   color: #fff;
+  height: 30px;
   width: 100%;
   border-bottom: 1px solid #696969;
+  background: #08010C;
 }
 
 .header__title {
@@ -28,6 +34,7 @@
 .header__close,
 .header__collapse {
   width: 38px;
+  height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -43,10 +50,20 @@
 
 .header__collapse {
   transition: .4s;
+
+}
+
+.collapse {
+  font-size: 25px;
+  transition: .1s;
 }
 
 .close {
   transition: .4s;
+}
+
+.collapse:hover {
+  font-size: 30px;
 }
 
 .close:hover {
@@ -55,5 +72,5 @@
 }
 
 .header__collapse:hover {
-  background: #181818;
+  background: hsl(228, 4%, 25%);
 }

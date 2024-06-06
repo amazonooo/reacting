@@ -1,0 +1,37 @@
+.card__page {
+  color: #fff;
+  padding: 1.5rem 0;
+  background: #08010C;
+  margin-inline: 6rem;
+}
+
+.page__block {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.page__inner {
+  display: flex;
+  justify-content: space-between;
+  row-gap: 5rem;
+  flex-wrap: wrap;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 30px;
+}
+
+.profile__inner {
+  position: fixed;
+  top: 3rem;
+  right: 1.2rem;
+  cursor: pointer;
+}
+
+.choose {
+  font-size: 1.5rem;
+}
