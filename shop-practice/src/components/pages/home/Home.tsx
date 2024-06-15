@@ -1,10 +1,30 @@
 import { FC } from 'react'
 import styles from './Home.module.scss'
+import { ProductService } from '../../../services/product_service'
+import { useQuery } from '@tanstack/react-query'
 
 const Home: FC = () => {
-    return <div className={styles.bg}>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. A fugiat cupiditate odit, aspernatur voluptates, architecto dicta ut rerum praesentium optio blanditiis voluptatum totam vitae tenetur vel corporis, dignissimos officia quam itaque nemo? Reprehenderit eaque aliquam voluptate voluptatibus nesciunt maxime hic?
+  const {
+    data: products,
+    isLoading
+  } = useQuery(['products'], () => ProductService.getProducts(), {
+    select: ({ products }) => products
+  })
+
+  return (
+    <div className={styles.bg}>
+      <h1>
+        Shop the collection
+      </h1>
+      {isLoading ? (
+        <div className='text-blue-400 text-2xl'>Loading...</div>
+      ) : products?.length ? (
+        products?.map(product => <div key={product.id}>{product.title}</div>)
+      ) : (
+        <div>Products not found!</div>
+      )}
     </div>
+  )
 }
 
 export default Home
