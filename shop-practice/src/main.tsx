@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import Home from './components/pages/home/Home.tsx'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import Home from './components/pages/home/Home'
 
 const queryClient = new QueryClient()
 
