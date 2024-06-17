@@ -5,9 +5,11 @@ import styles from './ProductItem.module.scss'
 const ProductItem: FC<{ product: IProduct }> = ({ product }) => {
 	return (
 		<div className={styles.item}>
-			<img src={product.thumbnail} alt={product.title} />
+			<div style={{
+				backgroundImage: `url(${product.images[0]})`
+			}} className={styles.image}></div>
 			<div className={styles.heading}>{product.title}</div>
-			<div>{product.price}$</div>
+			<div className={styles.price}>{new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(product.price)}</div>
 		</div>
 	)
 }

@@ -3,6 +3,7 @@ import styles from './Home.module.scss'
 import { ProductService } from '../../../services/product_service'
 import { useQuery } from '@tanstack/react-query'
 import ProductItem from '../../ui/productItem/ProductItem'
+import Layout from '../../ui/layout/Layout'
 
 const Home: FC = () => {
   const { data: products, isLoading } = useQuery({
@@ -12,8 +13,7 @@ const Home: FC = () => {
   })
 
   return (
-		<div className={styles.bg}>
-			<h1>Shop the collection</h1>
+		<Layout title='Shop the collection'>
 			{isLoading ? (
 				<div className='text-blue-400 text-2xl'>Loading...</div>
 			) : products?.length ? (
@@ -25,7 +25,7 @@ const Home: FC = () => {
 			) : (
 				<div>Products not found!</div>
 			)}
-		</div>
+		</Layout>
 	)
 }
 
