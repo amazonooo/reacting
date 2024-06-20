@@ -16,6 +16,7 @@ const Gallery: FC<{images: string[]}> = ({images}) => {
 			<div className={styles.list}>
         {images.map((image, index) => (
           <button 
+            key={image}
             onClick={() => setCurrentIndex(index)} 
             className={cn(styles.item, {
               [styles.active]: index === currentIndex
