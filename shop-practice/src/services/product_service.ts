@@ -7,7 +7,7 @@ export const ProductService = {
   async getProducts() {
     const response = await axios.get<IProductsResponse>('/products/search?q=phone', {
       params: {
-        limit: 5
+        limit: 20
       }
     })
     return response.data
